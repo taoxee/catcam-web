@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%90%B1%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="%23F5EDE3">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy / 隐私政策 — Cat Cam 猫咪快门</title>
+<style>
+  /* Cream-cat palette, transcribed from Design/DesignTokens.swift so the hosted
+     pages and the in-app viewer read as one product. */
+  :root {
+    --page:   #F5EDE3;
+    --card:   #FFF8F0;
+    --ink:    #4A3F35;
+    --body:   #5C5046;
+    --muted:  #6B5C4E;
+    --faint:  #7A6A5A;
+    --yellow: #FFE08A;
+    --pink:   #FFC7D0;
+    --link:   #9A6B1F;
+    --rule:   rgba(74, 63, 53, 0.12);
+    --shadow: rgba(74, 63, 53, 0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page:   #211C17;
+      --card:   #2C251E;
+      --ink:    #F2E7D8;
+      --body:   #DCCDBA;
+      --muted:  #BCAB96;
+      --faint:  #9C8B77;
+      --link:   #F0C879;
+      --rule:   rgba(242, 231, 216, 0.14);
+      --shadow: rgba(0, 0, 0, 0.30);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--body);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .wrap { max-width: 680px; margin: 0 auto; padding: 32px 20px 72px; }
+
+  /* --- the soft card every section sits on --- */
+  section {
+    background: var(--card);
+    border-radius: 22px;
+    padding: 8px 26px 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px var(--shadow), 0 8px 24px -18px var(--shadow);
+  }
+  section.alt { margin-top: 0; }
+
+  h1 {
+    font-size: 27px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 28px 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  /* A small milk-yellow dot before each heading -- the one bit of decoration. */
+  h2, h3 {
+    color: var(--ink);
+    position: relative;
+    padding-left: 18px;
+  }
+  h2 { font-size: 19px; margin: 38px 0 12px; }
+  h3 { font-size: 16px; margin: 32px 0 10px; }
+  h2::before, h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--yellow);
+  }
+  h3::before { width: 7px; height: 7px; top: 0.66em; }
+
+  p { margin: 0 0 14px; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  a { color: var(--link); text-decoration-color: color-mix(in srgb, var(--link) 35%, transparent); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--link); }
+
+  ul { padding-left: 4px; list-style: none; margin: 0 0 14px; }
+  li { margin-bottom: 10px; padding-left: 22px; position: relative; }
+  li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0.68em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pink);
+  }
+
+  /* --- meta line + version pill --- */
+  .meta { color: var(--faint); font-size: 14px; margin: 0 0 4px; }
+  .version {
+    display: inline-block;
+    background: var(--yellow);
+    color: #4A3F35;
+    border-radius: 999px;
+    padding: 2px 12px;
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-right: 10px;
+  }
+
+  /* --- language / cross-doc chips --- */
+  .lang-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px 0 22px;
+    font-size: 14px;
+  }
+  .lang-nav a {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 14px;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 500;
+  }
+  .lang-nav a:hover { background: var(--yellow); border-color: transparent; color: #4A3F35; }
+
+  /* --- the "this page is..." note --- */
+  .callout {
+    background: color-mix(in srgb, var(--yellow) 26%, var(--card));
+    border-radius: 16px;
+    padding: 16px 18px;
+    margin: 20px 0 8px;
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* --- sound credits --- */
+  table.credits { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 14px 0 10px; }
+  table.credits th, table.credits td {
+    text-align: left;
+    vertical-align: top;
+    padding: 11px 12px 11px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  table.credits th { color: var(--faint); font-weight: 600; white-space: nowrap; }
+  table.credits td:first-child { color: var(--ink); font-weight: 600; }
+  table.credits .by { color: var(--faint); }
+  /* Stack the table on narrow screens rather than letting it scroll sideways. */
+  @media (max-width: 560px) {
+    table.credits thead { display: none; }
+    table.credits tr {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    table.credits td { display: block; border: 0; padding: 1px 0; }
+  }
+
+  footer {
+    color: var(--faint);
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+    padding: 4px 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-nav">
+    <a href="#en">English</a>
+    <a href="#zh">中文</a>
+    <a href="./terms-of-use.html">使用条款 / Terms of Use &rarr;</a>
+  </div>
+
+  <section id="en">
+    <h1>Privacy Policy</h1>
+    <p class="meta"><span class="version">Version 2.1</span>Last updated: 8 September 2026</p>
+
+    <div class="callout">
+      This page is the <strong>Privacy Policy</strong>, describing how the App handles your data. The contract governing your rights and obligations is a separate document: the <a href="./terms-of-use.html">Terms of Use</a>. This Policy is a <strong>disclosure notice</strong>, incorporated into those Terms by reference; it does not itself create a contractual term or warranty under them.
+    </div>
+
+    <h2>Overview</h2>
+    <p>Cat Cam ("the App") helps you photograph your cat when it looks at the camera. The App is built around a simple principle: it does not collect data. Everything the App produces while you use it — including the live camera preview and the photos it captures — is processed and stored only on your own iPhone. The App never uploads anything to a server, and the developer cannot access, view, or obtain any photo or usage record from your device.</p>
+    <p>This Policy describes the actual behaviour of the <strong>current version (2.1)</strong> of the App. If a future version changes how data is handled, the "Changes to This Policy" section below applies.</p>
+
+    <h2>Permissions the App Uses</h2>
+    <ul>
+      <li><strong>Camera</strong>: used to show the live preview and to analyze, on-device, whether your cat is facing the camera. The feed is only used for real-time display and on-device analysis; it is never recorded as video or uploaded. A still photo is only created when a capture is triggered.</li>
+      <li><strong>Photo Library (Read and Write)</strong>: used to save captured photos into the Photos app, and to read back the shots you just took during the current session so they can appear as the thumbnail in the corner. Read access is also reserved for an in-app album view planned for a later version. <strong>For any purpose, the App only ever accesses the Cat Cam album it created itself</strong> — it never reads, scans, or enumerates anything else in your library. In the current version, tapping the thumbnail opens the system Photos app; there is no photo browser inside the App.</li>
+      <li><strong>Location (While Using)</strong>: used to record where a photo was taken. See "Photo Location" below.</li>
+    </ul>
+
+    <h2>What the Current Version Does Not Collect</h2>
+    <p>Version 2.1 of the App does not include any of the following:</p>
+    <ul>
+      <li>User accounts, registration, or sign-in</li>
+      <li>Analytics, usage-tracking, or crash-reporting SDKs</li>
+      <li>Advertising or ad tracking</li>
+      <li>Cloud sync or backup</li>
+      <li>Microphone recording, contacts, or other permissions</li>
+      <li>Any network connection made for the App's own functionality</li>
+    </ul>
+    <p>The App contains no third-party SDKs. System-level communication between your device and Apple — App Store downloads, or iCloud Photos sync that you enabled yourself — is governed by Apple's services and policies and is not data processing by this App.</p>
+
+    <h2>Photos You Capture</h2>
+    <p>All photos are stored locally in your iPhone's own Photos app, fully under your control — viewing, sharing, and deleting all happen through the system Photos app. The App keeps no <strong>persistent</strong> copy in its own storage; the most recent photo is held briefly in memory to draw the corner thumbnail and is released when you leave the App. At no point can the developer access any of it.</p>
+
+    <h2>Photo Location</h2>
+    <p>If you've granted this App location access in system settings, the App records where a photo was taken while you're using the camera, and writes that location into the photo's EXIF data and the system Photo Library's asset properties, so you can later browse your photos by location in the Photos app. Like the photos themselves, this location data <strong>stays entirely on your iPhone</strong> — the App never transmits it to any server, the developer cannot access it, and no third party is involved.</p>
+    <p>Location recording follows the system location permission directly: granted means recorded, not granted means not recorded. The App does not currently have its own in-app switch to turn location recording off separately — if you want to stop recording locations, go to Settings → Privacy &amp; Security → Location Services and turn off location access for this App; photos taken afterward will have no location attached.</p>
+    <p>If you leave Precise Location off for the App, it still records an approximate, city-scale coordinate rather than none at all, so your photos can still be roughly placed on a map.</p>
+
+    <h2>Your Rights</h2>
+    <p>Because the App collects, receives, and stores no personal data belonging to you, the developer holds nothing to access, correct, export, or delete, and so cannot action such a request on your behalf. Your control over everything the App produces is direct: the photos and any location inside them live in your own Photos app, where you can view, export, or delete them at any time, and deleting the App ends all of its processing.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>The App is not directed at children under 13 and does not knowingly collect personal information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>The developer may update this Privacy Policy from time to time to reflect changes to the App or to applicable law. Each update raises the version number at the top of this page and states a new effective date, and takes effect when it is published here.</p>
+    <p>If a change would <strong>materially alter how the App collects or handles personal data</strong> — for example by adding Sign in with Apple, cloud backup, or a subscription service — you will be told about it prominently inside the App, and any consent required by law will be obtained before that collection begins. Until you choose to use such a feature, the "does not collect data" description above continues to apply to you.</p>
+    <p>Section 10 of the Terms of Use permits the developer to change <strong>the Terms</strong> without prior notification. That right does <strong>not</strong> extend to a material change in how personal data is collected under this Policy, which is always notified as described in the paragraph above.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this policy, you can reach the developer at <a href="mailto:xtify.support@gmail.com">xtify.support@gmail.com</a>.</p>
+  </section>
+
+  <section id="zh" class="alt">
+    <h1>隐私政策</h1>
+    <p class="meta"><span class="version">版本 2.1</span>最后更新日期：2026年9月8日</p>
+
+    <div class="callout">
+      本页是<strong>隐私政策</strong>，说明本App如何处理你的数据。约束你与开发者之间权利义务的合同条款是另一份独立文件：<a href="./terms-of-use.html">使用条款</a>。本政策为<strong>告知性说明</strong>，通过引用并入使用条款，但其本身不构成使用条款中的合同条款或担保。
+    </div>
+
+    <h2>概述</h2>
+    <p>猫咪快门（以下简称"本App"）是一款帮助你拍摄猫咪正脸照片的相机工具。本App在设计上遵循"不收集数据"的原则：你使用本App产生的所有内容——包括实时相机画面和拍摄的照片——只会在你自己的iPhone本机上处理和保存。本App不会把任何数据上传到服务器，开发者本人也无法访问、查看或获取你拍摄的任何照片或使用记录。</p>
+    <p>本政策描述的是本App<strong>当前版本（2.1）</strong>的实际行为。未来版本若改变数据处理方式，将按下方"政策的变更"一节处理。</p>
+
+    <h2>本App使用的权限</h2>
+    <ul>
+      <li><strong>相机</strong>：用于实时取景，并在本机分析画面中猫咪是否正对镜头。画面仅用于实时显示和本机分析，不会被录制成视频或上传，只有在触发拍照时才会生成一张静态照片。</li>
+      <li><strong>相册（读取与写入）</strong>：用于把拍摄的照片保存进"照片"App，并读回本次使用期间刚拍下的照片以显示右下角的缩略图。读取权限同时为后续版本计划中的"应用内相册"预留。<strong>无论何种用途，本App只会访问自己创建的 Cat Cam 相册</strong>，不会读取、扫描或枚举你相册里 Cat Cam 之外的任何内容。当前版本点击缩略图会直接跳转到系统"照片"App，本App内没有照片浏览界面。</li>
+      <li><strong>位置（使用期间）</strong>：用于把拍摄地点记录到照片里。详见下方"拍摄地点"一节。</li>
+    </ul>
+
+    <h2>本App当前版本不收集的内容</h2>
+    <p>本App当前版本（2.1）不包含以下任何功能：</p>
+    <ul>
+      <li>用户账号、注册或登录系统</li>
+      <li>数据分析、统计或崩溃报告SDK</li>
+      <li>广告或广告追踪</li>
+      <li>云端同步或备份</li>
+      <li>麦克风录音、通讯录等其他权限</li>
+      <li>为本App自身功能建立的任何网络连接</li>
+    </ul>
+    <p>本App不含任何第三方SDK。你的设备与 Apple 之间的系统级通信（例如 App Store 下载、你自己开启的 iCloud 照片同步）由 Apple 的服务与政策管辖，不属于本App的数据处理行为。</p>
+
+    <h2>你拍摄的照片</h2>
+    <p>所有照片保存在你手机本地的"照片"App里，完全由你自己掌控——查看、分享、删除都通过iOS系统自带的"照片"App进行。本App不会在自身沙盒内建立任何<strong>持久</strong>副本；为显示右下角缩略图，最近一张照片会短暂保存在内存中，退出App后即被释放。开发者在任何环节都无法访问这些内容。</p>
+
+    <h2>拍摄地点</h2>
+    <p>如果你在系统设置里给本App开启了定位权限，本App会在你使用相机取景时，把当次拍摄的位置写入照片的 EXIF 信息与系统相册的资源属性中，这样你之后可以在"照片"App里按地点查看这些照片。这份位置数据和照片本身一样，<strong>全部只保存在你的iPhone本机</strong>，本App不会把它传输到任何服务器，开发者无法访问，也没有任何第三方参与。</p>
+    <p>位置记录完全跟随系统定位权限：授权即记录，未授权即不记录。本App目前没有独立的应用内开关来单独关闭位置记录——如果你想停止记录拍摄地点，可以随时前往"设置 → 隐私与安全性 → 定位服务"，关闭本App的定位权限，之后拍摄的照片就不会再带有位置信息。</p>
+    <p>如果你把定位权限设为"精确位置"关闭状态，本App仍会记录一个城市尺度的大致坐标，而不是完全不记录——这样照片在地图上仍能标出大致拍摄区域。</p>
+
+    <h2>你的权利</h2>
+    <p>由于本App不收集、不接收也不存储任何属于你的个人数据，开发者手中没有任何可供访问、更正、导出或删除的数据，因此无从代你执行这些请求。你对本App产生的全部内容的控制方式是直接的：照片和其中的位置信息都在你自己的"照片"App里，你可以随时查看、导出或删除；删除本App即终止其全部数据处理行为。</p>
+
+    <h2>儿童隐私</h2>
+    <p>本App不专门面向13岁以下儿童设计，也不会有意收集任何儿童的个人信息。</p>
+
+    <h2>政策的变更</h2>
+    <p>开发者可能会不时更新本隐私政策，以反映本App功能的调整或适用法律的变化。每次更新都会提高本页顶部的版本号并注明新的生效日期，更新后的版本自发布之时起生效。</p>
+    <p>如果某项变更会<strong>实质改变本App收集或处理个人数据的方式</strong>——例如未来加入「通过 Apple 登录」账号系统、云端备份或订阅服务——我们会在App内以显著方式告知你，并在开始收集前取得法律要求的同意。在你主动使用这类新功能之前，上文关于「不收集数据」的描述对你继续有效。</p>
+    <p>《使用条款》第 10 节允许开发者在不另行通知的情况下修改<strong>使用条款</strong>；该项权利<strong>不适用于</strong>本隐私政策中涉及个人数据收集方式的实质变更，此类变更一律按上一段的方式告知。</p>
+
+    <h2>联系我们</h2>
+    <p>如果你对本隐私政策有任何疑问，可以通过 <a href="mailto:xtify.support@gmail.com">xtify.support@gmail.com</a> 联系开发者。</p>
+  </section>
+
+  <footer>
+    这是<strong>隐私政策</strong>单独文档。请把它托管在一个公开可访问的网址上（例如 GitHub Pages、个人网站），并把该网址填进 App Store Connect 的"隐私政策 URL"字段。使用条款是另一份文件，见 <code>猫咪快门_使用条款.html</code>。<br>
+    This is the standalone <strong>Privacy Policy</strong>. Host it at a public URL (e.g. GitHub Pages, your own site) and put that URL in App Store Connect's "Privacy Policy URL" field. The Terms of Use are a separate file, <code>猫咪快门_使用条款.html</code>. 
+  </footer>
+
+</div>
+</body>
+</html>

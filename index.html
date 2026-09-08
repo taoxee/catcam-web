@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%90%B1%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#F5EDE3">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Cam 猫咪快门 — Legal</title>
+<style>
+  :root {
+    --page:#F5EDE3; --card:#FFF8F0; --ink:#4A3F35; --body:#5C5046;
+    --faint:#7A6A5A; --yellow:#FFE08A; --pink:#FFC7D0; --link:#9A6B1F;
+    --rule:rgba(74,63,53,0.12); --shadow:rgba(74,63,53,0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page:#211C17; --card:#2C251E; --ink:#F2E7D8; --body:#DCCDBA;
+      --faint:#9C8B77; --link:#F0C879;
+      --rule:rgba(242,231,216,0.14); --shadow:rgba(0,0,0,0.30);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; min-height:100vh; background:var(--page); color:var(--body);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+                "Helvetica Neue", Arial, sans-serif;
+    line-height:1.7; display:flex; align-items:center; justify-content:center;
+    padding:32px 20px;
+  }
+  .wrap { width:100%; max-width:460px; text-align:center; }
+  .cat { font-size:52px; line-height:1; margin-bottom:14px; }
+  h1 { font-size:25px; color:var(--ink); margin:0 0 4px; letter-spacing:-0.01em; }
+  .zh { color:var(--faint); font-size:15px; margin:0 0 4px; }
+  .tag { color:var(--faint); font-size:14px; margin:0 0 30px; }
+  .docs { display:flex; flex-direction:column; gap:12px; }
+  .doc {
+    display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    background:var(--card); border-radius:18px; padding:18px 22px;
+    text-decoration:none; border:1px solid var(--rule);
+    box-shadow:0 1px 3px var(--shadow);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .doc:hover {
+    transform:translateY(-2px);
+    background:color-mix(in srgb, var(--yellow) 22%, var(--card));
+    box-shadow:0 6px 18px -8px var(--shadow);
+  }
+  .doc-en { color:var(--ink); font-weight:600; font-size:16.5px; }
+  .doc-zh { color:var(--faint); font-size:14px; }
+  footer { margin-top:32px; color:var(--faint); font-size:12.5px; line-height:1.7; }
+  footer a { color:var(--link); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="cat">🐱</div>
+    <h1>Cat Cam</h1>
+    <p class="zh">猫咪快门</p>
+    <p class="tag">A camera that waits for your cat to look up.</p>
+
+    <div class="docs">
+        <a class="doc" href="./privacy-policy.html">
+          <span class="doc-en">Privacy Policy</span>
+          <span class="doc-zh">隐私政策</span>
+        </a>
+        <a class="doc" href="./terms-of-use.html">
+          <span class="doc-en">Terms of Use</span>
+          <span class="doc-zh">使用条款</span>
+        </a>
+    </div>
+
+    <footer>
+      Both documents are bilingual — English first, 中文在后。<br>
+      Questions? <a href="mailto:xtify.support@gmail.com">xtify.support@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>

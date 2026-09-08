@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%90%B1%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="%23F5EDE3">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use / 使用条款 — Cat Cam 猫咪快门</title>
+<style>
+  /* Cream-cat palette, transcribed from Design/DesignTokens.swift so the hosted
+     pages and the in-app viewer read as one product. */
+  :root {
+    --page:   #F5EDE3;
+    --card:   #FFF8F0;
+    --ink:    #4A3F35;
+    --body:   #5C5046;
+    --muted:  #6B5C4E;
+    --faint:  #7A6A5A;
+    --yellow: #FFE08A;
+    --pink:   #FFC7D0;
+    --link:   #9A6B1F;
+    --rule:   rgba(74, 63, 53, 0.12);
+    --shadow: rgba(74, 63, 53, 0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page:   #211C17;
+      --card:   #2C251E;
+      --ink:    #F2E7D8;
+      --body:   #DCCDBA;
+      --muted:  #BCAB96;
+      --faint:  #9C8B77;
+      --link:   #F0C879;
+      --rule:   rgba(242, 231, 216, 0.14);
+      --shadow: rgba(0, 0, 0, 0.30);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--body);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .wrap { max-width: 680px; margin: 0 auto; padding: 32px 20px 72px; }
+
+  /* --- the soft card every section sits on --- */
+  section {
+    background: var(--card);
+    border-radius: 22px;
+    padding: 8px 26px 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px var(--shadow), 0 8px 24px -18px var(--shadow);
+  }
+  section.alt { margin-top: 0; }
+
+  h1 {
+    font-size: 27px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 28px 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  /* A small milk-yellow dot before each heading -- the one bit of decoration. */
+  h2, h3 {
+    color: var(--ink);
+    position: relative;
+    padding-left: 18px;
+  }
+  h2 { font-size: 19px; margin: 38px 0 12px; }
+  h3 { font-size: 16px; margin: 32px 0 10px; }
+  h2::before, h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--yellow);
+  }
+  h3::before { width: 7px; height: 7px; top: 0.66em; }
+
+  p { margin: 0 0 14px; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  a { color: var(--link); text-decoration-color: color-mix(in srgb, var(--link) 35%, transparent); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--link); }
+
+  ul { padding-left: 4px; list-style: none; margin: 0 0 14px; }
+  li { margin-bottom: 10px; padding-left: 22px; position: relative; }
+  li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0.68em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pink);
+  }
+
+  /* --- meta line + version pill --- */
+  .meta { color: var(--faint); font-size: 14px; margin: 0 0 4px; }
+  .version {
+    display: inline-block;
+    background: var(--yellow);
+    color: #4A3F35;
+    border-radius: 999px;
+    padding: 2px 12px;
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-right: 10px;
+  }
+
+  /* --- language / cross-doc chips --- */
+  .lang-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px 0 22px;
+    font-size: 14px;
+  }
+  .lang-nav a {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 14px;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 500;
+  }
+  .lang-nav a:hover { background: var(--yellow); border-color: transparent; color: #4A3F35; }
+
+  /* --- the "this page is..." note --- */
+  .callout {
+    background: color-mix(in srgb, var(--yellow) 26%, var(--card));
+    border-radius: 16px;
+    padding: 16px 18px;
+    margin: 20px 0 8px;
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* --- sound credits --- */
+  table.credits { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 14px 0 10px; }
+  table.credits th, table.credits td {
+    text-align: left;
+    vertical-align: top;
+    padding: 11px 12px 11px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  table.credits th { color: var(--faint); font-weight: 600; white-space: nowrap; }
+  table.credits td:first-child { color: var(--ink); font-weight: 600; }
+  table.credits .by { color: var(--faint); }
+  /* Stack the table on narrow screens rather than letting it scroll sideways. */
+  @media (max-width: 560px) {
+    table.credits thead { display: none; }
+    table.credits tr {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    table.credits td { display: block; border: 0; padding: 1px 0; }
+  }
+
+  footer {
+    color: var(--faint);
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+    padding: 4px 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-nav">
+    <a href="#en">English</a>
+    <a href="#zh">中文</a>
+    <a href="./privacy-policy.html">隐私政策 / Privacy Policy &rarr;</a>
+  </div>
+
+  <section id="en">
+    <h1>Terms of Use</h1>
+    <p class="meta"><span class="version">Version 2.1</span>Effective: 8 September 2026</p>
+
+    <div class="callout">
+      This page is the <strong>Terms of Use</strong> — the contract between you and the developer regarding the App. The <a href="./privacy-policy.html">Privacy Policy</a>, which describes how data is handled, is a separate document.
+    </div>
+
+    <h3>1. Acceptance</h3>
+    <p>By downloading, installing, or using Cat Cam (猫咪快门, "the App"), you confirm that you have read, understood, and agree to be bound by these Terms of Use. If you do not agree to any part of them, do not use the App and please delete it from your device.</p>
+    <p>The <a href="./privacy-policy.html">Privacy Policy</a> is incorporated into these Terms by reference as a <strong>disclosure notice</strong> describing how the App handles data. For the avoidance of doubt: statements in the Privacy Policy do not create a contractual obligation, representation, or warranty under these Terms, and nothing in it may be construed as a promise about the App's functionality.</p>
+
+    <h3>2. Eligibility</h3>
+    <p>You represent and warrant that you are at least 13 years old and not below the minimum age at which you can consent to an agreement of this kind in your jurisdiction, and that you have the legal capacity to enter into these Terms. If you are below that age, you may use the App only after a parent or legal guardian has read and agreed to these Terms, and they are responsible for your use of it.</p>
+
+    <h3>3. Licence Grant</h3>
+    <p>Subject to your compliance with these Terms, the developer grants you a <strong>personal, non-exclusive, non-transferable, non-sublicensable, revocable, limited</strong> licence to install and use the App on Apple devices that you own or control, in accordance with the Licensed Application End User Licence Agreement contained in the App Store Terms of Service. The App is <strong>licensed, not sold</strong>, to you, and the developer reserves all rights not expressly granted here.</p>
+    <p>You may not, and may not permit anyone else to: reverse engineer, decompile, disassemble, or attempt to derive the source code of the App (except to the extent applicable mandatory law expressly prohibits this restriction); rent, lease, sell, sublicense, distribute, or otherwise make the App available to a third party; circumvent or interfere with any technical limitation of the App; remove, obscure, or alter any copyright, trademark, or attribution notice in the App; or use the App for any unlawful purpose, or to harass or harm animals or other people.</p>
+
+    <h3>4. Content You Capture</h3>
+    <p>Every photo you take with the App <strong>belongs to you</strong>. The developer claims no rights in it and cannot access, view, or obtain it (see the <a href="./privacy-policy.html">Privacy Policy</a>). You are solely responsible for ensuring that what you photograph is lawful — including obtaining any consent required from people or property appearing in the frame — and for any consequence arising from that content.</p>
+
+    <h3>5. Sound Credits and Third-Party Licences</h3>
+    <p>The App ships thirteen call sounds. Seven of them are adapted from openly licensed third-party recordings and are credited below as their licences require. Every listed recording was <strong>trimmed to its opening passage, converted to mono 48 kHz AAC, and adjusted to a gentler loudness</strong> — so what the App plays is a <strong>modified version</strong> of the original, not the original file.</p>
+    <table class="credits">
+      <thead><tr><th>Sound</th><th>Original recording and author</th><th>Licence</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Subtropical Asia · Asian Koel</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Asian_Koel.ogg">Asian Koel.ogg</a><br><span class="by">Philip Eapen, Kochi, India</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>East Asia · Japanese Tit</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Japanese_Tit_(Parus_minor)_calling.webm">Japanese Tit calling</a><br><span class="by">The Nature Box, Tokyo, Japan</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>Northern Europe · Blackbird</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Common_Blackbird_(Turdus_merula)_(W1CDR0001425_BD22).ogg">Common Blackbird</a><br><span class="by">Lawrence Shove; rights holder The British Library Board, England</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>Europe · European Robin</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:European_Robin_(Erithacus_rubecula)_(W1CDR0001525_BD17).ogg">European Robin</a><br><span class="by">Aubrey John Williams; rights holder The British Library Board, Scotland</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>North America · Northern Cardinal</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Cardinalis_cardinalis_cardinalis_-_Northern_Cardinal_-_XC71726.ogg">Northern Cardinal XC71726</a><br><span class="by">Jonathon Jongsma, Minnesota, USA</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></td>
+        </tr>
+        <tr>
+          <td>South America · Great Kiskadee</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Pitangus_sulphuratus_sound2.ogg">Great Kiskadee sound</a><br><span class="by">Fernando S. Aldado</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></td>
+        </tr>
+        <tr>
+          <td>Oceania · Australian Magpie</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Magpie_Caroling.ogg">Magpie Caroling.ogg</a><br><span class="by">Hullwarren, Australia</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>These recordings are distributed under their own original licences (CC BY-SA 3.0 or CC BY-SA 4.0) and are not exclusive to the App. No recording carrying an NC (non-commercial) or ND (no-derivatives) term is used. Those licences are granted by the respective rights holders and imply no warranty from the developer.</p>
+    <p>The remaining sounds carry no attribution requirement: <strong>Garden Birds</strong> is a CC0 public-domain dedication from OpenGameArt, and the other five (Flying Sparrow, Tiny Mouse Squeaks, Fluttering Paper, Squeaky Toy, Flutter Chirps) were synthesised for this App and are owned by the developer. Nothing in these Terms sublicenses the developer's original sounds to you.</p>
+    <p>The same credits are also available inside the App under Settings › About › Sound Credits.</p>
+
+    <h3>6. Disclaimer of Warranties</h3>
+    <p>The App is provided <strong>"as is" and "as available"</strong>, without warranty of any kind, express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+    <p>The App's cat-facing-the-camera detection is a <strong>heuristic</strong> that runs entirely on your device. The developer does not warrant that it will fire in every scene, for every cat, or in every lighting condition; that a trigger will always be accurate; or that the App will run uninterrupted, error-free, or without data loss. You understand and accept that the App is a photographic aid, not a guarantee of a result.</p>
+    <p>Nothing in this section excludes or limits any warranty or liability that cannot be excluded or limited under applicable law; if any exclusion is held unenforceable, it shall be limited to the minimum extent necessary and the remainder of this section shall remain in full force.</p>
+
+    <h3>7. Limitation of Liability</h3>
+    <p>To the maximum extent permitted by applicable law, the developer shall not be liable for any <strong>indirect, incidental, special, punitive, or consequential</strong> loss arising out of your use of, or inability to use, the App — including but not limited to missed photographic moments, loss of device storage or data, device damage, or any commercial loss — whether or not the developer was advised of the possibility of such loss.</p>
+    <p>To the maximum extent permitted by applicable law, the developer's <strong>total aggregate liability</strong> under these Terms or in connection with the App (counted across all claims together, not per claim) shall not exceed the greater of: (a) the total amount you actually paid for the App and any in-app purchase in the twelve months preceding the event giving rise to the claim; or (b) US$10.</p>
+    <p>Nothing in this section excludes or limits liability that cannot be excluded or limited under applicable law, including liability for fraud, wilful misconduct, or death or personal injury caused by negligence.</p>
+
+    <h3>8. Indemnity</h3>
+    <p>To the maximum extent permitted by applicable law, you agree to indemnify, defend, and hold the developer harmless from any third-party claim, demand, loss, liability, and reasonable legal cost arising out of your use of the App in breach of these Terms, the content you capture or share, or your infringement of anyone else's rights. This section does not apply to liability that applicable consumer law does not permit to be placed on you.</p>
+
+    <h3>9. Future Features and Services</h3>
+    <p>The current version of the App has no account system, makes no network connection for its own functionality, and collects no data. The developer <strong>reserves the right to add, change, suspend, or remove any feature in future versions, without prior notification and without liability to you or any third party</strong>, including but not limited to account features such as Sign in with Apple, cloud backup and sync, in-app purchases or subscriptions, and an in-app gallery.</p>
+    <p>Where such a feature involves collecting or processing personal data, its data handling will be described in the Privacy Policy accompanying that version, and any consent required by law will be obtained before collection begins. Using these features is your choice; if you do not use them, they do not affect you.</p>
+
+    <h3>10. Changes to These Terms</h3>
+    <p>The developer may, at its sole discretion, <strong>modify, supplement, or remove any part of these Terms of Use at any time and without prior notification</strong>. Revised Terms take effect when published on this page, as indicated by the version number and effective date at the top.</p>
+    <p>Your <strong>continued use of the App after a change constitutes your acceptance</strong> of the revised Terms. You are encouraged to review this page periodically. If you do not accept a change, your sole remedy is to stop using the App and delete it.</p>
+    <p>For the avoidance of doubt: the "without prior notification" provision in this section applies <strong>only to these Terms of Use</strong> and not to the <a href="./privacy-policy.html">Privacy Policy</a>. A material change to how personal data is collected is always notified as described under "Changes to This Policy" in that document, and consent is obtained where the law requires it.</p>
+
+    <h3>11. Termination</h3>
+    <p>If you breach any provision of these Terms, the licence granted to you <strong>terminates automatically and without notice</strong>. You may terminate these Terms at any time by deleting the App from your device.</p>
+    <p>The following survive termination: the second paragraph of Section 3 (use restrictions), and Sections 4, 5, 6, 7, 8, 12, and 13.</p>
+
+    <h3>12. General</h3>
+    <p>These Terms constitute the <strong>entire agreement</strong> between you and the developer regarding the App and supersede any prior oral or written communication. The <a href="./privacy-policy.html">Privacy Policy</a> is incorporated with the character described in Section 1. If any provision is held invalid or unenforceable, it shall be reduced or severed to the minimum extent necessary and the remaining provisions shall remain in full force.</p>
+    <p>No failure or delay by the developer in exercising a right under these Terms operates as a waiver of it. The developer may assign these Terms in connection with a transfer of its business, merger, or acquisition; you may not assign these Terms without the developer's prior written consent.</p>
+    <p>These Terms are governed by the laws of the <strong>Republic of Singapore</strong>, excluding its conflict-of-laws rules, and the courts of Singapore shall have jurisdiction — without prejudice to any rights you have as a consumer under the mandatory law of your own jurisdiction, including the right to bring proceedings in your local courts.</p>
+    <p>Apple is not a party to these Terms and has no responsibility for the App. Apple and its subsidiaries are third-party beneficiaries of these Terms and have the right to enforce them against you.</p>
+
+    <h3>13. Contact</h3>
+    <p>If you have questions about these Terms of Use, you can reach the developer at <a href="mailto:xtify.support@gmail.com">xtify.support@gmail.com</a>.</p>
+  </section>
+
+  <section id="zh" class="alt">
+    <h1>使用条款</h1>
+    <p class="meta"><span class="version">版本 2.1</span>生效日期：2026年9月8日</p>
+
+    <div class="callout">
+      本页是<strong>使用条款</strong>，即你与开发者之间就本App达成的合同。说明数据处理方式的<a href="./privacy-policy.html">隐私政策</a>是另一份独立文件。
+    </div>
+
+    <h3>1. 条款的接受</h3>
+    <p>下载、安装或使用猫咪快门（Cat Cam，以下简称"本App"），即表示你已阅读、理解并同意受本使用条款约束。如果你不同意其中任何内容，请不要使用本App，并将其从你的设备上删除。</p>
+    <p><a href="./privacy-policy.html">隐私政策</a>以引用方式并入本条款，作为对本App数据处理方式的<strong>告知性说明</strong>。为免疑义：隐私政策中的陈述不构成本条款项下的合同义务、保证或担保，其中所载内容不得被解释为对本App功能的承诺。</p>
+
+    <h3>2. 资格</h3>
+    <p>你声明并保证：你已年满 13 周岁，且不低于你所在司法管辖区规定的、可自行同意此类协议的最低年龄；你具有订立本条款所需的完全民事行为能力。若你未达到该年龄，只有在父母或法定监护人阅读并同意本条款后方可使用本App，且由其对你的使用行为负责。</p>
+
+    <h3>3. 许可授予</h3>
+    <p>在你遵守本条款的前提下，开发者授予你一项<strong>个人的、非独占的、不可转让的、不可转授权的、可撤销的、有限的</strong>许可，允许你在你拥有或控制的 Apple 设备上安装并使用本App，且须符合 App Store《服务条款》所含《许可应用最终用户许可协议》的规定。本App是<strong>授权使用</strong>，而非出售给你；开发者保留本条款未明示授予的一切权利。</p>
+    <p>你不得，也不得允许他人：对本App进行反向工程、反编译、反汇编或试图获取其源代码（仅在适用强制性法律明确禁止此类限制的范围内除外）；出租、出借、出售、转授权、分发或以其他方式将本App提供给第三方；规避或干扰本App的任何技术限制；移除、遮蔽或更改本App中的任何版权、商标或署名标识；将本App用于任何违法目的，或用于骚扰、伤害动物或他人。</p>
+
+    <h3>4. 你拍摄的内容</h3>
+    <p>你使用本App拍摄的所有照片<strong>归你所有</strong>。开发者不对这些内容主张任何权利，也无法访问、查看或获取它们（详见<a href="./privacy-policy.html">隐私政策</a>）。你需自行确保所拍摄内容的合法性，包括在必要时取得任何出现在画面中的人物或财产的同意，并对因该内容引起的任何后果承担全部责任。</p>
+
+    <h3>5. 音效来源与第三方授权</h3>
+    <p>本App内置十三段"呼唤音效"。其中七段改编自第三方公开授权的录音，依其许可要求署名如下。所有列出的录音均已被<strong>截取前段、转为单声道 48 kHz AAC 并调整为较温和的响度</strong>——因此本App播放的是原录音的<strong>修改版本</strong>，而非原始文件。</p>
+    <table class="credits">
+      <thead><tr><th>音效</th><th>原始录音与作者</th><th>许可</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>亚热带亚洲·噪鹃</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Asian_Koel.ogg">Asian Koel.ogg</a><br><span class="by">Philip Eapen，印度科钦</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>东亚·日本山雀</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Japanese_Tit_(Parus_minor)_calling.webm">Japanese Tit calling</a><br><span class="by">The Nature Box，日本东京</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>北欧·乌鸫</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Common_Blackbird_(Turdus_merula)_(W1CDR0001425_BD22).ogg">Common Blackbird</a><br><span class="by">Lawrence Shove；版权持有人 The British Library Board，英格兰</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>欧洲·知更鸟</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:European_Robin_(Erithacus_rubecula)_(W1CDR0001525_BD17).ogg">European Robin</a><br><span class="by">Aubrey John Williams；版权持有人 The British Library Board，苏格兰</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+        <tr>
+          <td>北美·北美红雀</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Cardinalis_cardinalis_cardinalis_-_Northern_Cardinal_-_XC71726.ogg">Northern Cardinal XC71726</a><br><span class="by">Jonathon Jongsma，美国明尼苏达州</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></td>
+        </tr>
+        <tr>
+          <td>南美·大食蝇霸鹟</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Pitangus_sulphuratus_sound2.ogg">Great Kiskadee sound</a><br><span class="by">Fernando S. Aldado</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></td>
+        </tr>
+        <tr>
+          <td>大洋洲·澳洲喜鹊</td>
+          <td><a href="https://commons.wikimedia.org/wiki/File:Magpie_Caroling.ogg">Magpie Caroling.ogg</a><br><span class="by">Hullwarren，澳大利亚</span></td>
+          <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>上述录音以其各自的原始许可（CC BY-SA 3.0 或 CC BY-SA 4.0）分发，并非本App独占素材；本App未使用任何含 NC（非商业）或 ND（禁止演绎）条款的录音。这些录音的许可由其各自的权利人授予，不构成开发者对其的任何担保。</p>
+    <p>其余音效不带署名义务：<strong>庭院鸟鸣</strong>为 OpenGameArt 上的 CC0 公共领域献出作品；其余五段（飞鸟啾鸣、小动物吱啾、沙沙扑动、玩具挤压、扑翅啾鸣）为本App的原创合成，版权归开发者所有。本条款中的任何内容均不构成对开发者原创音效的再授权。</p>
+    <p>以上完整署名同样可在App内的「设置 › 关于 › 音效来源」页面中查看。</p>
+
+    <h3>6. 免责声明</h3>
+    <p>本App按<strong>"现状"（as is）与"现有"（as available）</strong>提供，不附带任何明示或默示的担保，包括但不限于对适销性、特定用途适用性以及不侵权的默示担保。</p>
+    <p>本App的猫脸朝向识别是一项在设备本机运行的<strong>启发式判断</strong>。开发者不保证它会在任何场景、任何猫、任何光线条件下触发，也不保证每次触发都准确，更不保证本App的运行不中断、无错误或不丢失数据。你理解并接受：本App是一个辅助拍摄工具，而不是一项可靠性承诺。</p>
+    <p>本节不排除或限制任何依据适用法律不得排除或限制的担保或责任；若某项排除被认定为不可执行，该排除将在必要的最小范围内受限，本节其余部分继续完全有效。</p>
+
+    <h3>7. 责任限制</h3>
+    <p>在适用法律允许的最大范围内，开发者不对因使用或无法使用本App而产生的任何<strong>间接、附带、特殊、惩罚性或后果性损失</strong>承担责任，包括但不限于错失的拍摄时机、设备存储空间或数据的损失、设备损坏或任何商业损失，无论开发者是否已被告知此类损失的可能性。</p>
+    <p>在适用法律允许的最大范围内，开发者就本条款项下或与本App相关的<strong>全部责任总额</strong>（合并计算所有请求，而非每项请求单独计算），不超过下列两者中的较高者：（a）你在引发请求的事件发生前十二个月内，为本App及其任何内购实际支付的总金额；或（b）10 美元。</p>
+    <p>本节不排除或限制任何依据适用法律不得排除或限制的责任，包括因欺诈、故意不当行为，或因过失致人死亡或人身伤害而产生的责任。</p>
+
+    <h3>8. 赔偿</h3>
+    <p>在适用法律允许的最大范围内，你同意就下列事项引起的任何第三方主张、索赔、损失、责任及合理的法律费用，对开发者进行赔偿、抗辩并使其免受损害：你对本App的使用违反本条款；你拍摄或分享的内容；或你侵犯了他人的权利。本节不适用于依据适用消费者法律不得由你承担的责任。</p>
+
+    <h3>9. 未来的功能与服务</h3>
+    <p>本App当前版本不含账号系统、不为自身功能建立网络连接、不收集任何数据。开发者<strong>保留在未来版本中新增、修改、暂停或移除任何功能的权利，恕不另行通知，亦不因此对你或任何第三方承担责任</strong>，包括但不限于「通过 Apple 登录」（Sign in with Apple）等账号功能、云端备份与同步、内购或订阅服务，以及应用内相册等。</p>
+    <p>此类功能若涉及个人数据的收集或处理，其数据处理方式将在相应版本的隐私政策中单独说明，并在开始收集前按法律要求向你征求同意。你可以自行选择是否使用这些功能；不使用即不受其影响。</p>
+
+    <h3>10. 条款的变更</h3>
+    <p>开发者可自行决定，<strong>随时修改、增补或删除本使用条款的任何内容，恕不另行通知（without prior notification）</strong>。修改后的条款自在本页面发布之时起生效，并以本页顶部标注的版本号与生效日期为准。</p>
+    <p>你在条款变更后<strong>继续使用本App，即视为你已接受修改后的条款</strong>。建议你定期查阅本页面以了解最新内容。如果你不接受任何变更，你唯一的救济方式是停止使用并删除本App。</p>
+    <p>为免疑义：本节所述的"恕不另行通知"<strong>仅适用于本使用条款</strong>，不适用于<a href="./privacy-policy.html">隐私政策</a>。涉及个人数据收集方式的实质变更，一律按隐私政策"政策的变更"一节的约定另行告知，并在法律要求时取得你的同意。</p>
+
+    <h3>11. 终止</h3>
+    <p>如果你违反本条款的任何规定，开发者授予你的许可将<strong>自动终止，无需通知</strong>。你可以随时通过从设备上删除本App来终止本条款。</p>
+    <p>终止后，下列规定继续有效：第 3 节第二段（使用限制）、第 4 节、第 5 节、第 6 节、第 7 节、第 8 节、第 12 节及第 13 节。</p>
+
+    <h3>12. 一般条款</h3>
+    <p>本条款构成你与开发者之间就本App达成的<strong>完整协议</strong>，并取代此前的任何口头或书面沟通。<a href="./privacy-policy.html">隐私政策</a>以第 1 节所述的性质并入本条款。如果本条款的任何条文被认定为无效或不可执行，该条文将在必要的最小范围内被削减或分离，其余条文继续完全有效。</p>
+    <p>开发者未行使或延迟行使本条款下的任何权利，不构成对该权利的放弃。开发者可在业务转让、合并或收购的情况下转让本条款；未经开发者事先书面同意，你不得转让本条款。</p>
+    <p>本条款的解释与适用，以<strong>新加坡共和国</strong>法律为准（排除其冲突法规则），并由新加坡法院管辖，但不影响你作为消费者依据你所在地强制性法律享有的权利与在当地法院起诉的权利。</p>
+    <p>Apple 不是本条款的当事方，对本App不承担任何责任；Apple 与其子公司是本条款的第三方受益人，有权对你执行本条款。</p>
+
+    <h3>13. 联系方式</h3>
+    <p>如果你对本使用条款有任何疑问，可以通过 <a href="mailto:xtify.support@gmail.com">xtify.support@gmail.com</a> 联系开发者。</p>
+  </section>
+
+  <footer>
+    这是<strong>使用条款</strong>单独文档。请把它托管在一个公开可访问的网址上，并把该网址填进 App Store Connect 的"最终用户许可协议 / EULA"字段。隐私政策是另一份文件，见 <code>猫咪快门_隐私政策.html</code>。<br>
+    This is the standalone <strong>Terms of Use</strong>. Host it at a public URL and put that URL in App Store Connect's "EULA" field. The Privacy Policy is a separate file, <code>猫咪快门_隐私政策.html</code>. 
+  </footer>
+
+</div>
+</body>
+</html>
