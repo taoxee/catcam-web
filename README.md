@@ -1,12 +1,12 @@
 # Cat Cam — Legal
 
 The privacy policy and terms of use for **Cat Cam / 猫咪快门**, published at
-<https://taoxee.github.io/cat-cam/>.
+<https://taoxee.github.io/catcam-web/>.
 
 Both documents are bilingual, English first.
 
-- [Privacy Policy / 隐私政策](https://taoxee.github.io/cat-cam/privacy-policy.html)
-- [Terms of Use / 使用条款](https://taoxee.github.io/cat-cam/terms-of-use.html)
+- [Privacy Policy / 隐私政策](https://taoxee.github.io/catcam-web/privacy-policy.html)
+- [Terms of Use / 使用条款](https://taoxee.github.io/catcam-web/terms-of-use.html)
 
 ## Do not edit these files here
 
