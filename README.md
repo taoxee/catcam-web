@@ -15,4 +15,4 @@ They are **generated**. The source of wording lives in the app repository under
 into the copy bundled inside the app. Editing a page here will be overwritten on the
 next build, and would put the hosted wording out of sync with what ships in the app.
 
-Contact: xtify.support@gmail.com
+Contact: support.xtify@gmail.com
