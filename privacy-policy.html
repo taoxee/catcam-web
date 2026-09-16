@@ -186,42 +186,49 @@
 
   <section id="en">
     <h1>Privacy Policy</h1>
-    <p class="meta"><span class="version">Version 2.1</span>Last updated: 8 September 2026</p>
+    <p class="meta"><span class="version">Version 2.2</span>Last updated: 16 September 2026</p>
 
     <div class="callout">
       This page is the <strong>Privacy Policy</strong>, describing how the App handles your data. The contract governing your rights and obligations is a separate document: the <a href="./terms-of-use.html">Terms of Use</a>. This Policy is a <strong>disclosure notice</strong>, incorporated into those Terms by reference; it does not itself create a contractual term or warranty under them.
     </div>
 
     <h2>Overview</h2>
-    <p>Cat Cam ("the App") helps you photograph your cat when it looks at the camera. The App is built around a simple principle: it does not collect data. Everything the App produces while you use it — including the live camera preview and the photos it captures — is processed and stored only on your own iPhone. The App never uploads anything to a server, and the developer cannot access, view, or obtain any photo or usage record from your device.</p>
-    <p>This Policy describes the actual behaviour of the <strong>current version (2.1)</strong> of the App. If a future version changes how data is handled, the "Changes to This Policy" section below applies.</p>
+    <p>Cat Cam ("the App") helps you photograph your cat when it looks at the camera. The App is built around a simple principle: it does not collect data. Everything the App produces while you use it — including the live camera preview, the photos it captures, and the locations inside them — is processed and stored only on your own iPhone. <strong>None of it is ever uploaded</strong>, and the developer cannot access, view, or obtain any photo, location, or usage record from your device.</p>
+    <p>This version adds one optional paid feature, the Cat Trail map. Unlocking it means the App talks to <strong>Apple's</strong> servers to check that purchase — see "Purchases" below. That is the App's <strong>only</strong> network communication for its own functionality, it carries no photo, location, or usage data, and it does not change anything above.</p>
+    <p>This Policy describes the actual behaviour of the <strong>current version (2.2)</strong> of the App. If a future version changes how data is handled, the "Changes to This Policy" section below applies.</p>
 
     <h2>Permissions the App Uses</h2>
     <ul>
       <li><strong>Camera</strong>: used to show the live preview and to analyze, on-device, whether your cat is facing the camera. The feed is only used for real-time display and on-device analysis; it is never recorded as video or uploaded. A still photo is only created when a capture is triggered.</li>
-      <li><strong>Photo Library (Read and Write)</strong>: used to save captured photos into the Photos app, and to read back the shots you just took during the current session so they can appear as the thumbnail in the corner. Read access is also reserved for an in-app album view planned for a later version. <strong>For any purpose, the App only ever accesses the Cat Cam album it created itself</strong> — it never reads, scans, or enumerates anything else in your library. In the current version, tapping the thumbnail opens the system Photos app; there is no photo browser inside the App.</li>
-      <li><strong>Location (While Using)</strong>: used to record where a photo was taken. See "Photo Location" below.</li>
+      <li><strong>Photo Library (Read and Write)</strong>: used to save captured photos into the Photos app, and to read them back so they can appear as the corner thumbnail and inside the App's own album view. <strong>For any purpose, the App only ever accesses the Cat Cam album it created itself</strong> — it never reads, scans, or enumerates anything else in your library. Tapping the corner thumbnail opens that in-app album, which shows your Cat Cam photos and, on its map tab, where they were taken.</li>
+      <li><strong>Location (While Using)</strong>: used to record where a photo was taken, and to show your own position on the map when you ask for it. See "Photo Location" below.</li>
     </ul>
 
     <h2>What the Current Version Does Not Collect</h2>
-    <p>Version 2.1 of the App does not include any of the following:</p>
+    <p>Version 2.2 of the App does not include any of the following:</p>
     <ul>
       <li>User accounts, registration, or sign-in</li>
       <li>Analytics, usage-tracking, or crash-reporting SDKs</li>
       <li>Advertising or ad tracking</li>
       <li>Cloud sync or backup</li>
       <li>Microphone recording, contacts, or other permissions</li>
-      <li>Any network connection made for the App's own functionality</li>
+      <li>Any network connection that sends your photos, locations, or usage anywhere — the purchase check described under "Purchases" is the App's only network communication, and it carries none of that</li>
     </ul>
-    <p>The App contains no third-party SDKs. System-level communication between your device and Apple — App Store downloads, or iCloud Photos sync that you enabled yourself — is governed by Apple's services and policies and is not data processing by this App.</p>
+    <p>The App contains no third-party SDKs. Communication between your device and Apple — App Store downloads, the in-app purchase check, or iCloud Photos sync that you enabled yourself — is governed by Apple's services and policies and is not data processing by this App.</p>
 
     <h2>Photos You Capture</h2>
-    <p>All photos are stored locally in your iPhone's own Photos app, fully under your control — viewing, sharing, and deleting all happen through the system Photos app. The App keeps no <strong>persistent</strong> copy in its own storage; the most recent photo is held briefly in memory to draw the corner thumbnail and is released when you leave the App. At no point can the developer access any of it.</p>
+    <p>All photos are stored locally in your iPhone's own Photos app, fully under your control — viewing, sharing, and deleting all happen through the system Photos app or the App's own album view, which reads from it. At no point can the developer access any of it.</p>
+    <p>There is one exception, and it exists only if you granted the App <strong>limited</strong> photo access (you picked specific photos rather than allowing the whole library). In that state the system will not give the App back a photo it just took unless that photo is in your selection, so the album would show gaps. To avoid that, the App keeps its <strong>own copy of those photos inside its private app storage</strong>, purely so it can display them to you. Those copies stay on your iPhone, are visible to no other app, and are never uploaded. A copy is deleted when you delete that photo in the App, when you delete the App itself, and automatically as soon as the photo becomes readable from your library again — because you added it to your selection, or switched the App to full access. With full photo access granted, no such copy is ever made.</p>
 
     <h2>Photo Location</h2>
     <p>If you've granted this App location access in system settings, the App records where a photo was taken while you're using the camera, and writes that location into the photo's EXIF data and the system Photo Library's asset properties, so you can later browse your photos by location in the Photos app. Like the photos themselves, this location data <strong>stays entirely on your iPhone</strong> — the App never transmits it to any server, the developer cannot access it, and no third party is involved.</p>
     <p>Location recording follows the system location permission directly: granted means recorded, not granted means not recorded. The App does not currently have its own in-app switch to turn location recording off separately — if you want to stop recording locations, go to Settings → Privacy &amp; Security → Location Services and turn off location access for this App; photos taken afterward will have no location attached.</p>
     <p>If you leave Precise Location off for the App, it still records an approximate, city-scale coordinate rather than none at all, so your photos can still be roughly placed on a map.</p>
+    <p>The App's own map tab <strong>displays</strong> those recorded locations, drawn on Apple Maps. Reading a map means your device asks Apple for map imagery, exactly as the system Maps app does; that is Apple's service under Apple's policies, and the App sends Apple no photo and no photo location of yours. Any name you give a place is typed by you and stored on your device only — the App never looks a place up online. If you switch on the map's "follow my location" control, the App uses your current position and compass heading to keep the map centred on you, for as long as that control is on and you are on the map screen; that too stays on your device.</p>
+
+    <h2>Purchases</h2>
+    <p>The App is free. One optional feature — the Cat Trail map — is unlocked by a one-time in-app purchase. <strong>Apple processes that purchase</strong>: you pay Apple, and your payment details never reach the App or the developer, who never sees your name, card, or Apple ID.</p>
+    <p>To know whether the feature is unlocked — at launch, and when you tap Restore Purchase — the App asks the App Store whether this device's Apple ID owns that one product, using Apple's StoreKit framework. That exchange is <strong>only about that purchase</strong>. It sends no photo, no location, no usage record, and nothing that identifies you to the developer. What comes back is stored nowhere but in the App's own record of "unlocked or not". Apple's own handling of the transaction is covered by Apple's privacy policy, and the developer receives only Apple's aggregate sales reports, which name no buyer.</p>
 
     <h2>Your Rights</h2>
     <p>Because the App collects, receives, and stores no personal data belonging to you, the developer holds nothing to access, correct, export, or delete, and so cannot action such a request on your behalf. Your control over everything the App produces is direct: the photos and any location inside them live in your own Photos app, where you can view, export, or delete them at any time, and deleting the App ends all of its processing.</p>
@@ -240,42 +247,49 @@
 
   <section id="zh" class="alt">
     <h1>隐私政策</h1>
-    <p class="meta"><span class="version">版本 2.1</span>最后更新日期：2026年9月8日</p>
+    <p class="meta"><span class="version">版本 2.2</span>最后更新日期：2026年9月16日</p>
 
     <div class="callout">
       本页是<strong>隐私政策</strong>，说明本App如何处理你的数据。约束你与开发者之间权利义务的合同条款是另一份独立文件：<a href="./terms-of-use.html">使用条款</a>。本政策为<strong>告知性说明</strong>，通过引用并入使用条款，但其本身不构成使用条款中的合同条款或担保。
     </div>
 
     <h2>概述</h2>
-    <p>猫咪快门（以下简称"本App"）是一款帮助你拍摄猫咪正脸照片的相机工具。本App在设计上遵循"不收集数据"的原则：你使用本App产生的所有内容——包括实时相机画面和拍摄的照片——只会在你自己的iPhone本机上处理和保存。本App不会把任何数据上传到服务器，开发者本人也无法访问、查看或获取你拍摄的任何照片或使用记录。</p>
-    <p>本政策描述的是本App<strong>当前版本（2.1）</strong>的实际行为。未来版本若改变数据处理方式，将按下方"政策的变更"一节处理。</p>
+    <p>猫咪快门（以下简称"本App"）是一款帮助你拍摄猫咪正脸照片的相机工具。本App在设计上遵循"不收集数据"的原则：你使用本App产生的所有内容——包括实时相机画面、拍摄的照片，以及照片中记录的位置——只会在你自己的iPhone本机上处理和保存。<strong>这些内容永远不会被上传</strong>，开发者本人也无法访问、查看或获取你的任何照片、位置或使用记录。</p>
+    <p>本版本新增了一项可选的付费功能——猫猫足迹地图。解锁它意味着本App会与 <strong>Apple</strong> 的服务器通信以校验该笔购买，详见下方"应用内购买"一节。这是本App为自身功能建立的<strong>唯一</strong>网络通信，其中不含任何照片、位置或使用数据，也不改变上述任何一点。</p>
+    <p>本政策描述的是本App<strong>当前版本（2.2）</strong>的实际行为。未来版本若改变数据处理方式，将按下方"政策的变更"一节处理。</p>
 
     <h2>本App使用的权限</h2>
     <ul>
       <li><strong>相机</strong>：用于实时取景，并在本机分析画面中猫咪是否正对镜头。画面仅用于实时显示和本机分析，不会被录制成视频或上传，只有在触发拍照时才会生成一张静态照片。</li>
-      <li><strong>相册（读取与写入）</strong>：用于把拍摄的照片保存进"照片"App，并读回本次使用期间刚拍下的照片以显示右下角的缩略图。读取权限同时为后续版本计划中的"应用内相册"预留。<strong>无论何种用途，本App只会访问自己创建的 Cat Cam 相册</strong>，不会读取、扫描或枚举你相册里 Cat Cam 之外的任何内容。当前版本点击缩略图会直接跳转到系统"照片"App，本App内没有照片浏览界面。</li>
-      <li><strong>位置（使用期间）</strong>：用于把拍摄地点记录到照片里。详见下方"拍摄地点"一节。</li>
+      <li><strong>相册（读取与写入）</strong>：用于把拍摄的照片保存进"照片"App，并把它们读回来，用于显示右下角的缩略图以及App内的相册界面。<strong>无论何种用途，本App只会访问自己创建的 Cat Cam 相册</strong>，不会读取、扫描或枚举你相册里 Cat Cam 之外的任何内容。点击右下角缩略图会打开App内的相册，其中可以查看你的 Cat Cam 照片，并在地图标签页上查看它们的拍摄地点。</li>
+      <li><strong>位置（使用期间）</strong>：用于把拍摄地点记录到照片里，以及在你主动要求时在地图上显示你自己的位置。详见下方"拍摄地点"一节。</li>
     </ul>
 
     <h2>本App当前版本不收集的内容</h2>
-    <p>本App当前版本（2.1）不包含以下任何功能：</p>
+    <p>本App当前版本（2.2）不包含以下任何功能：</p>
     <ul>
       <li>用户账号、注册或登录系统</li>
       <li>数据分析、统计或崩溃报告SDK</li>
       <li>广告或广告追踪</li>
       <li>云端同步或备份</li>
       <li>麦克风录音、通讯录等其他权限</li>
-      <li>为本App自身功能建立的任何网络连接</li>
+      <li>任何会把你的照片、位置或使用情况发送出去的网络连接——"应用内购买"一节所述的购买校验是本App唯一的网络通信，其中不含上述任何内容</li>
     </ul>
-    <p>本App不含任何第三方SDK。你的设备与 Apple 之间的系统级通信（例如 App Store 下载、你自己开启的 iCloud 照片同步）由 Apple 的服务与政策管辖，不属于本App的数据处理行为。</p>
+    <p>本App不含任何第三方SDK。你的设备与 Apple 之间的通信（例如 App Store 下载、应用内购买的校验、你自己开启的 iCloud 照片同步）由 Apple 的服务与政策管辖，不属于本App的数据处理行为。</p>
 
     <h2>你拍摄的照片</h2>
-    <p>所有照片保存在你手机本地的"照片"App里，完全由你自己掌控——查看、分享、删除都通过iOS系统自带的"照片"App进行。本App不会在自身沙盒内建立任何<strong>持久</strong>副本；为显示右下角缩略图，最近一张照片会短暂保存在内存中，退出App后即被释放。开发者在任何环节都无法访问这些内容。</p>
+    <p>所有照片保存在你手机本地的"照片"App里，完全由你自己掌控——查看、分享、删除既可以通过iOS系统自带的"照片"App进行，也可以在本App的相册界面中进行，后者读取的正是系统相册里的照片。开发者在任何环节都无法访问这些内容。</p>
+    <p>这里有一个例外，且仅在你给予本App<strong>"有限照片访问"</strong>权限（即你只勾选了部分照片，而没有允许访问完整相册）时才会发生。在这种状态下，系统不会把刚拍下的照片回传给本App，除非那张照片正好在你勾选的范围内，于是App内相册就会缺图。为避免这种情况，本App会把这些照片<strong>在自己的私有沙盒中另存一份</strong>，其唯一用途就是显示给你看。这些副本始终留在你的iPhone上，其他任何App都无法看到，也永远不会被上传。副本会在以下情况被删除：你在App内删除了那张照片、你删除了本App，以及当那张照片重新可以从系统相册读取时（你把它加入了勾选范围，或把权限改为完整访问）会自动清除。如果你给的是完整相册权限，则本App从不建立此类副本。</p>
 
     <h2>拍摄地点</h2>
     <p>如果你在系统设置里给本App开启了定位权限，本App会在你使用相机取景时，把当次拍摄的位置写入照片的 EXIF 信息与系统相册的资源属性中，这样你之后可以在"照片"App里按地点查看这些照片。这份位置数据和照片本身一样，<strong>全部只保存在你的iPhone本机</strong>，本App不会把它传输到任何服务器，开发者无法访问，也没有任何第三方参与。</p>
     <p>位置记录完全跟随系统定位权限：授权即记录，未授权即不记录。本App目前没有独立的应用内开关来单独关闭位置记录——如果你想停止记录拍摄地点，可以随时前往"设置 → 隐私与安全性 → 定位服务"，关闭本App的定位权限，之后拍摄的照片就不会再带有位置信息。</p>
     <p>如果你把定位权限设为"精确位置"关闭状态，本App仍会记录一个城市尺度的大致坐标，而不是完全不记录——这样照片在地图上仍能标出大致拍摄区域。</p>
+    <p>本App的地图标签页会把这些已记录的位置<strong>显示</strong>在 Apple 地图上。显示地图意味着你的设备要向 Apple 请求地图图像，这与系统"地图"App的做法完全相同，属于 Apple 的服务并适用 Apple 的政策；本App不会向 Apple 发送你的任何照片或照片位置。你给地点起的名字由你自己输入、只保存在你的设备上——本App不会联网查询任何地点。如果你打开地图上的"跟随我的位置"，本App会使用你的当前位置和罗盘朝向让地图持续居中于你，其持续时间仅限于该开关处于开启状态且你停留在地图界面期间；这部分数据同样只留在你的设备上。</p>
+
+    <h2>应用内购买</h2>
+    <p>本App免费。其中一项可选功能——猫猫足迹地图——通过一次性的应用内购买解锁。<strong>该购买由 Apple 处理</strong>：你付款给 Apple，你的支付信息不会到达本App或开发者，开发者也无从得知你的姓名、银行卡或 Apple ID。</p>
+    <p>为了判断该功能是否已解锁——在App启动时，以及你点击"恢复购买"时——本App会通过 Apple 的 StoreKit 框架，向 App Store 询问本机 Apple ID 是否拥有这一个商品。该通信<strong>仅与这笔购买有关</strong>：不发送任何照片、任何位置、任何使用记录，也不发送任何能让开发者识别你身份的信息。返回的结果除了用于记录"已解锁 / 未解锁"这一状态外，不作任何其他存储。Apple 对该交易本身的处理适用 Apple 的隐私政策；开发者只能收到 Apple 提供的汇总销售报告，其中不含任何购买者姓名。</p>
 
     <h2>你的权利</h2>
     <p>由于本App不收集、不接收也不存储任何属于你的个人数据，开发者手中没有任何可供访问、更正、导出或删除的数据，因此无从代你执行这些请求。你对本App产生的全部内容的控制方式是直接的：照片和其中的位置信息都在你自己的"照片"App里，你可以随时查看、导出或删除；删除本App即终止其全部数据处理行为。</p>
